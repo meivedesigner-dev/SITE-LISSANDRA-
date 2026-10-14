@@ -1,0 +1,8 @@
+# Materiais internos (não publicar)
+workshop/FOTOS/
+workshop/VÍDEOS/
+workshop/*.md
+*.md
+!README.md
+desktop.ini
+Thumbs.db
