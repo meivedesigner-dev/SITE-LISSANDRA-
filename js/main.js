@@ -219,6 +219,29 @@ const CONFIG = {
     tSec.hidden = false;
   }
 
+  /* ---------- Vídeo da hero ---------- */
+  var heroVideo = $("[data-hero-video]");
+  if (heroVideo) {
+    var conn = navigator.connection || {};
+    var mobileQ = window.matchMedia("(max-aspect-ratio: 4/5)");
+    // Celular em pé usa a capa vertical
+    if (mobileQ.matches) heroVideo.poster = "../videos/workshop-hero-poster-mobile.jpg";
+    // Movimento reduzido ou economia de dados: fica só a imagem de capa
+    if (reduce || conn.saveData) {
+      heroVideo.removeAttribute("autoplay");
+      heroVideo.preload = "none";
+      heroVideo.pause();
+    } else if ("IntersectionObserver" in window) {
+      // Pausa quando a hero sai da tela (economiza bateria e processamento)
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { var p = heroVideo.play(); if (p && p.catch) p.catch(function () {}); }
+          else heroVideo.pause();
+        });
+      }, { threshold: 0.05 }).observe(heroVideo);
+    }
+  }
+
   /* ---------- Header e barra fixa mobile ---------- */
   var header = $(".site-header");
   var mbar = $("[data-mbar]");

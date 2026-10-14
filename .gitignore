@@ -6,3 +6,6 @@ workshop/*.md
 !README.md
 desktop.ini
 Thumbs.db
+
+# Vídeo original (não publicar)
+videos/*-original.mp4
