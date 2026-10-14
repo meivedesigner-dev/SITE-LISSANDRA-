@@ -11,7 +11,7 @@ const CONFIG = {
   preco: "R$ 197",
   precoPorPessoa: "R$ 98,50",          // 197 ÷ 2 — usado só na oferta
   data: "domingo, 1º de novembro de 2026",
-  dataCurta: "domingo, 1º/11",
+  dataCurta: "domingo, 01/11",
   dataFechamento: "Domingo, 1º de novembro",
   horario: "19h",
   prazoInscricao: "quinta-feira, 29 de outubro",
