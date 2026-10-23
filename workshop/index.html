@@ -29,6 +29,7 @@
   <!-- Ícones (linha, traço 1.5) -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <defs><path id="seal-path" d="M80,80 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1 -124,0"/></defs>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></symbol>
     <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
     <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
@@ -56,7 +57,7 @@
       <a class="brand" href="../index.html" aria-label="Lissandra Bassi, página inicial">
         <img src="../logo/logo.webp" width="330" height="108" alt="Lissandra Bassi">
       </a>
-      <a class="btn btn--perola" href="#oferta" data-cta>Garantir vaga <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+      <a class="btn btn--perola" href="#oferta" data-cta>Garantir vaga <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></span></a>
     </div>
   </header>
 
@@ -73,7 +74,7 @@
           <span class="pill" data-hero-item>Workshop on-line e ao vivo · <span data-config="dataCurta">domingo, 01/11</span></span>
           <h1 class="split" data-split>Um domingo pode mudar uma conversa que se repete <em>há anos.</em></h1>
           <div class="actions" data-hero-item>
-            <a class="btn btn--perola" href="#oferta" data-cta>Quero mapear nossa conversa <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+            <a class="btn btn--perola" href="#oferta" data-cta>Quero mapear nossa conversa <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></span></a>
           </div>
           <p class="micro" data-hero-item><span data-config="preco">R$ 197</span> por casal · Ao vivo e online · Só <span data-config="vagas">8</span> casais por turma</p>
         </div>
@@ -282,7 +283,7 @@
             </div>
             <p class="map__after" data-reveal="up">Vocês saem com um <strong>Mapa da Conversa que se Repete preenchido por vocês mesmos</strong> e um roteiro aplicável a uma situação real de vocês dois.</p>
             <div class="map__cta" data-reveal="up">
-              <a class="btn btn--vinho" href="#oferta" data-cta>Quero mapear nossa conversa <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+              <a class="btn btn--vinho" href="#oferta" data-cta>Quero mapear nossa conversa <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></span></a>
             </div>
           </div>
         </div>
@@ -379,18 +380,20 @@
       </div>
     </section>
 
-    <!-- QUEM CONDUZ, [PENDENTE] apresentação e credenciais: exibir só quando confirmadas -->
-    <section class="sec sec--dark on-dark">
+    <!-- QUEM CONDUZ / SOBRE -->
+    <section class="sec sec--dark on-dark" id="sobre">
       <div class="wrap host">
         <div class="photo photo--tall" data-reveal="clip">
           <img src="../images/lissandra-bassi.jpg" width="800" height="800" loading="lazy" decoding="async" alt="Retrato de Lissandra Bassi" data-parallax>
         </div>
-        <div data-reveal="right">
+        <div class="host__text" data-reveal="right">
           <span class="pill">Quem conduz</span>
           <h2>Lissandra Bassi</h2>
-          <p class="host__role">Terapeuta de Casal</p>
-          <p>Autora do livro <em>Casal de Verdade</em>.</p>
-          <p class="pending">[PENDENTE] Apresentação e credenciais da facilitadora.</p>
+          <p class="host__role">Terapeuta de Casal · Autora do livro <em>Casal de Verdade</em></p>
+          <p>Há mais de 20 anos estudo e trabalho com comportamento e desenvolvimento humano. Em 2020, ofereci atendimentos gratuitos para casais e famílias e, em uma única noite, recebi cerca de 150 pedidos. Aquela experiência me mostrou quantas relações precisavam de espaço para serem ouvidas, e os casais passaram a ocupar o centro do meu trabalho.</p>
+          <p>Hoje atendo casais de todo o Brasil, online. Meu olhar é sistêmico e integrativo e reúne análise comportamental, neurolinguística (com certificação internacional), hipnose clínica e o estudo da ancestralidade de cada um, onde aparecem os padrões invisíveis que herdamos da família e repetimos no casamento sem perceber.</p>
+          <p class="host__quote">Meu papel não é decidir por vocês. É ajudar vocês a enxergarem o ciclo que constroem juntos, para que possam escolher com mais clareza como seguir.</p>
+          <p class="host__close">Neste workshop, vocês não vão apenas ouvir uma palestra. Vão construir juntos o mapa da conversa que mais se repete na casa de vocês e sair com um roteiro para conduzi-la de outro jeito.</p>
         </div>
       </div>
     </section>
@@ -427,7 +430,7 @@
           </div>
         </div>
         <div class="testi-cta">
-          <a class="btn btn--vinho btn--wide" href="#oferta" data-cta>Quero mapear nossa conversa <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+          <a class="btn btn--vinho btn--wide" href="#oferta" data-cta>Quero mapear nossa conversa <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></span></a>
         </div>
       </div>
     </section>
@@ -469,7 +472,7 @@
 
           <p class="rec-notice">A gravação do workshop não está incluída na inscrição e é vendida separadamente.</p>
 
-          <a class="btn btn--vinho btn--wide" href="#oferta" data-checkout>Quero garantir nossa vaga <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+          <a class="btn btn--vinho btn--wide" href="#oferta" data-checkout>Quero garantir nossa vaga <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></span></a>
           <p class="micro"><span data-config="preco">R$ 197</span> no total para os dois.</p>
           <p class="pending" style="color:var(--vinho)">[PENDENTE] Link de checkout e formas de pagamento/parcelamento.</p>
 
@@ -531,7 +534,7 @@
           </div>
         </div>
         <div class="actions" data-reveal="up">
-          <a class="btn btn--perola" href="#oferta" data-cta>Quero mapear nossa conversa <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+          <a class="btn btn--perola" href="#oferta" data-cta>Quero mapear nossa conversa <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></span></a>
         </div>
       </div>
     </section>
@@ -544,7 +547,7 @@
       <p>Terapeuta de Casal</p>
       <div class="links">
         <a href="../index.html">Página inicial</a>
-        <a href="#" data-whatsapp>WhatsApp</a>
+        <a href="#" data-whatsapp data-msg="workshop">WhatsApp</a>
         <!-- [PENDENTE] link da Política de Privacidade -->
       </div>
     </div>
@@ -552,8 +555,10 @@
 
   <div class="mbar" data-mbar>
     <strong><span data-config="preco">R$ 197</span> por casal</strong>
-    <a class="btn btn--vinho" href="#oferta" data-cta>Garantir vaga <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-arrow"/></svg></span></a>
+    <a class="btn btn--vinho" href="#oferta" data-cta>Garantir vaga <span class="btn__arrow"><svg viewBox="0 0 24 24"><use href="#i-wa"/></svg></span></a>
   </div>
+
+  <a class="wa-float" href="#" data-whatsapp data-msg="workshop" aria-label="Conversar com a Lissandra no WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><use href="#i-wa"/></svg><span class="wa-float__tip">Fale comigo</span></a>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>

@@ -29,6 +29,7 @@ const CONFIG = {
   whatsapp: "5511963051717",
   msgInscricao: "Oi Lissandra! Quero garantir nossa vaga no workshop Mapa da Conversa que se Repete (domingo, 1º/11, às 19h).",
   msgAtendimento: "Oi Lissandra! Vim pelo site e gostaria de agendar uma conversa sobre o acompanhamento terapêutico.",
+  msgWorkshop: "Oi Lissandra! Vim pela página do workshop Mapa da Conversa que se Repete e gostaria de mais informações.",
 
   // Depoimentos REAIS, com autorização por escrito.
   // Se o array estiver vazio, a seção de depoimentos NÃO aparece na página.
@@ -92,18 +93,17 @@ const CONFIG = {
   if (/[?&]shot\b/.test(location.search)) document.documentElement.classList.add("shot");
 
   /* ---------- Links ---------- */
-  var checkoutOk = CONFIG.checkoutUrl && CONFIG.checkoutUrl.indexOf("#CHECKOUT") !== 0;
-  $$("[data-checkout]").forEach(function (el) {
-    // Enquanto o checkout estiver pendente, o botão abre o WhatsApp com a mensagem de inscrição.
-    el.href = checkoutOk ? CONFIG.checkoutUrl : wa(CONFIG.msgInscricao);
+  // Todos os botões levam ao WhatsApp da Lissandra.
+  function toWhats(el, msg) {
+    el.href = wa(msg);
     el.target = "_blank";
     el.rel = "noopener";
-  });
-  if (checkoutOk) $$("[data-cta]").forEach(function (el) { el.href = CONFIG.checkoutUrl; });
+  }
+  // Botões de inscrição (workshop): mensagem de vaga
+  $$("[data-cta], [data-checkout]").forEach(function (el) { toWhats(el, CONFIG.msgInscricao); });
+  // Demais links de WhatsApp: atendimento (home) ou informações do workshop
   $$("[data-whatsapp]").forEach(function (el) {
-    el.href = wa(CONFIG.msgAtendimento);
-    el.target = "_blank";
-    el.rel = "noopener";
+    toWhats(el, el.getAttribute("data-msg") === "workshop" ? CONFIG.msgWorkshop : CONFIG.msgAtendimento);
   });
   if (CONFIG.gravacaoUrl) {
     var g = $("[data-gravacao]");
