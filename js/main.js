@@ -385,7 +385,7 @@ const CONFIG = {
       var t = gsap.timeline({ scrollTrigger: { trigger: card, start: "top 82%", once: true } });
       t.from(card, { y: 90, opacity: 0, duration: 1.1, ease: "power3.out", delay: (i % 3) * .14 })
         .from($(".scene__head", card), { y: 12, opacity: 0, duration: .6, ease: "power2.out" }, "-=.6")
-        .from($(".scene__num", card), { y: 30, opacity: 0, duration: .9, ease: "power3.out" }, "<")
+
         .from(lines, {
           opacity: 0,
           x: function (k, el) { return el.classList.contains("l") ? -26 : el.classList.contains("r") ? 26 : 0; },
