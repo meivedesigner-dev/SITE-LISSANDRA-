@@ -11,6 +11,7 @@ const CONFIG = {
   preco: "R$ 197",
   precoPorPessoa: "R$ 98,50",          // 197 ÷ 2 — usado só na oferta
   parcelas: "12x de R$ 20,37",            // parcelamento exibido na oferta
+  parcelaValor: "R$ 20,37",               // valor de cada parcela (destaque do preço)
   data: "domingo, 15 de novembro de 2026",
   dataCurta: "domingo, 15/11",
   dataFechamento: "Domingo, 15 de novembro",
@@ -80,6 +81,7 @@ const CONFIG = {
     preco: CONFIG.preco,
     precoPorPessoa: CONFIG.precoPorPessoa,
     parcelas: CONFIG.parcelas,
+    parcelaValor: CONFIG.parcelaValor,
     dataCurta: CONFIG.dataCurta,
     dataCap: cap(CONFIG.data),
     dataFechamento: CONFIG.dataFechamento,

@@ -875,3 +875,6 @@ h1 em, h2 em, h3 em { color: var(--vinho-claro); }
 @media (max-width: 479px) { .exclusive__badge { font-size: .7rem; letter-spacing: .1em; padding: .6em 1em; } }
 .price__inst { margin: .5em 0 0; font-weight: 600; font-size: 1.05rem; color: var(--vinho); }
 .on-dark .offer .price__inst { color: var(--vinho); }
+.price__x { font-family: var(--display); font-size: clamp(1.4rem, 3vw, 1.8rem); color: var(--vinho); }
+.price__row .price__val { font-size: clamp(3.6rem, 10vw, 4.8rem); }
+.price__inst { font-size: 1.15rem; }
