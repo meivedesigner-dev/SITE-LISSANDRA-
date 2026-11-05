@@ -31,6 +31,9 @@ const CONFIG = {
   msgInscricao: "Oi Lissandra! Quero garantir nossa vaga no workshop Mapa da Conversa que se Repete (domingo, 15/11, às 19h).",
   msgAtendimento: "Oi Lissandra! Vim pelo site e gostaria de agendar uma conversa sobre o acompanhamento terapêutico.",
   msgWorkshop: "Oi Lissandra! Vim pela página do workshop Mapa da Conversa que se Repete e gostaria de mais informações.",
+  // [PENDENTE] WhatsApp Business do atendimento de terapia (por enquanto, o mesmo número)
+  whatsappTerapia: "5511963051717",
+  msgTerapia: "Oi Lissandra! Gostaria de informações sobre acompanhamento terapêutico individual.",
 
   // Depoimentos REAIS, com autorização por escrito.
   // Se o array estiver vazio, a seção de depoimentos NÃO aparece na página.
@@ -104,7 +107,13 @@ const CONFIG = {
   $$("[data-cta], [data-checkout]").forEach(function (el) { toWhats(el, CONFIG.msgInscricao); });
   // Demais links de WhatsApp: atendimento (home) ou informações do workshop
   $$("[data-whatsapp]").forEach(function (el) {
-    toWhats(el, el.getAttribute("data-msg") === "workshop" ? CONFIG.msgWorkshop : CONFIG.msgAtendimento);
+    var t = el.getAttribute("data-msg");
+    if (t === "terapia") {
+      el.href = "https://wa.me/" + CONFIG.whatsappTerapia + "?text=" + encodeURIComponent(CONFIG.msgTerapia);
+      el.target = "_blank"; el.rel = "noopener";
+      return;
+    }
+    toWhats(el, t === "workshop" ? CONFIG.msgWorkshop : CONFIG.msgAtendimento);
   });
   if (CONFIG.gravacaoUrl) {
     var g = $("[data-gravacao]");

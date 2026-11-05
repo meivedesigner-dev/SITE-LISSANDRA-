@@ -816,3 +816,60 @@ h1 em, h2 em, h3 em { color: var(--vinho-claro); }
 .btn--outline-verde .btn__arrow { background: var(--verde); color: var(--branco); width: 32px; height: 32px; }
 .btn--outline-verde .btn__arrow svg { width: 18px; height: 18px; }
 .btn--outline-verde:hover { background: rgba(31, 158, 79, .08); filter: none; }
+
+/* =========================================================
+   Reestruturação (7 seções)
+   ========================================================= */
+/* Topo: destaque "Sala exclusiva" */
+.exclusive { margin: 1.4rem 0 0; }
+.exclusive__badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: .7em 1.3em;
+  border-radius: 999px;
+  background: var(--perola);
+  color: var(--vinho);
+  font-size: .84rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase;
+  box-shadow: 0 10px 30px -12px rgba(0, 0, 0, .6);
+}
+.exclusive__badge svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ws-hero .actions { margin-top: 1.6rem; }
+.scroll-cue { display: none; }
+
+/* Método: quadros com ícone no lugar do número */
+.step__sq svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.pillars__squares .step__sq svg { width: 56px; height: 56px; stroke-width: 1.2; }
+
+/* O que vocês levam: lista dentro do painel */
+.takeaways--panel { margin-top: clamp(56px, 8vw, 96px); padding-top: clamp(40px, 6vw, 64px); border-top: 1px solid var(--linha); }
+.takeaways--panel .photo { max-width: 420px; }
+.panel .promise-card { margin-top: clamp(40px, 6vw, 64px); }
+.panel .map__cta { margin-top: clamp(32px, 5vw, 48px); }
+.on-dark .panel .promise-card p { color: var(--perola-80); }
+.on-dark .panel .promise-card .strong { color: var(--perola); }
+
+/* Investimento: bônus compacto abaixo do cartão */
+.bonus--compact {
+  max-width: 760px; margin: clamp(48px, 7vw, 72px) auto 0;
+  grid-template-columns: 140px 1fr; gap: 28px;
+  padding: 28px; border-radius: 22px;
+  background: rgba(246, 240, 232, .06);
+  box-shadow: inset 0 0 0 1px var(--linha-escura);
+}
+.bonus--compact .bonus__img { max-width: 140px; transform: rotate(-4deg); }
+.bonus--compact h3 { font-size: clamp(1.4rem, 2.4vw, 1.9rem); color: var(--perola); margin: .2em 0 .4em; }
+.bonus--compact h3 em { color: var(--perola); }
+.bonus--compact p { margin: 0; font-size: .98rem; }
+.bonus--compact .pill { margin-bottom: .6rem; }
+@media (max-width: 559px) { .bonus--compact { grid-template-columns: 1fr; text-align: center; } .bonus--compact .bonus__img { margin: 0 auto; } }
+
+/* Para quem não é */
+.notfor h3 { font-size: clamp(1.5rem, 2.6vw, 2rem); color: var(--perola); margin-bottom: 1em; }
+.notfor ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.notfor li { display: flex; gap: 14px; align-items: flex-start; color: var(--perola-80); font-size: 1rem; }
+.notfor .ico { box-shadow: inset 0 0 0 1.5px var(--perola-60); color: var(--perola-80); }
+.notfor a { color: var(--perola); font-weight: 600; text-underline-offset: 3px; }
+
+/* Botão final */
+.final-cta { margin-top: clamp(48px, 7vw, 72px); }
+.final-cta__data { font-family: var(--display); font-size: clamp(1.1rem, 1.8vw, 1.3rem); color: var(--tinta-70); margin-bottom: 1.2em; }
+@media (max-width: 479px) { .exclusive__badge { font-size: .7rem; letter-spacing: .1em; padding: .6em 1em; } }
