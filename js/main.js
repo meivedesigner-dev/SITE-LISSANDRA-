@@ -10,6 +10,7 @@ const CONFIG = {
   produto: "Mapa da Conversa que se Repete",
   preco: "R$ 197",
   precoPorPessoa: "R$ 98,50",          // 197 ÷ 2 — usado só na oferta
+  parcelas: "12x de R$ 20,37",            // parcelamento exibido na oferta
   data: "domingo, 15 de novembro de 2026",
   dataCurta: "domingo, 15/11",
   dataFechamento: "Domingo, 15 de novembro",
@@ -78,6 +79,7 @@ const CONFIG = {
     produto: CONFIG.produto,
     preco: CONFIG.preco,
     precoPorPessoa: CONFIG.precoPorPessoa,
+    parcelas: CONFIG.parcelas,
     dataCurta: CONFIG.dataCurta,
     dataCap: cap(CONFIG.data),
     dataFechamento: CONFIG.dataFechamento,
