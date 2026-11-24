@@ -12,10 +12,10 @@ const CONFIG = {
   precoPorPessoa: "R$ 98,50",          // 197 ÷ 2 — usado só na oferta
   parcelas: "12x de R$ 20,37",            // parcelamento exibido na oferta
   parcelaValor: "R$ 20,37",               // valor de cada parcela (destaque do preço)
-  data: "domingo, 15 de novembro de 2026",
-  dataCurta: "domingo, 15/11",
-  dataFechamento: "Domingo, 15 de novembro",
-  dataFaixa: "15 de novembro",            // texto das faixas diagonais
+  data: "domingo, 13 de dezembro de 2026",
+  dataCurta: "domingo, 13/12",
+  dataFechamento: "Domingo, 13 de dezembro",
+  dataFaixa: "13 de dezembro",            // texto das faixas diagonais
   horario: "19h",
   prazoInscricao: "quinta-feira, 29 de outubro",
   prazoInscricaoCurto: "quinta, 29/10",
@@ -30,7 +30,7 @@ const CONFIG = {
   plataforma: null,                      // [PENDENTE] Zoom/Meet etc. — se null, a pergunta fica oculta
 
   whatsapp: "5511963051717",
-  msgInscricao: "Oi Lissandra! Quero garantir nossa vaga no workshop Mapa da Conversa que se Repete (domingo, 15/11, às 19h).",
+  msgInscricao: "Oi Lissandra! Quero garantir nossa vaga no workshop Mapa da Conversa que se Repete (domingo, 13/12, às 19h).",
   msgAtendimento: "Oi Lissandra! Vim pelo site e gostaria de agendar uma conversa sobre o acompanhamento terapêutico.",
   msgWorkshop: "Oi Lissandra! Vim pela página do workshop Mapa da Conversa que se Repete e gostaria de mais informações.",
   // [PENDENTE] WhatsApp Business do atendimento de terapia (por enquanto, o mesmo número)
