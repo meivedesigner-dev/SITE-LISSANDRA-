@@ -26,7 +26,7 @@ const CONFIG = {
   minimoCasais: 4,
   checkoutUrl: "#CHECKOUT-PENDENTE",     // [PENDENTE] cole aqui o link do checkout
   gravacaoUrl: null,                     // [PENDENTE] — se null, não exibe link
-  livro: { titulo: "Casal de Verdade", autora: "Lissandra Bassi", formato: null }, // [PENDENTE] formato
+  livro: { titulo: "Casal de Verdade", autora: "Lissandra Bassi", formato: null }, // não é mais bônus (bônus = caderno de exercícios)
   plataforma: null,                      // [PENDENTE] Zoom/Meet etc. — se null, a pergunta fica oculta
 
   whatsapp: "5511963051717",
