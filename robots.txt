@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lissandrabassi.netlify.app/sitemap.xml
